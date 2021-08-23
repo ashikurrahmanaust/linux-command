@@ -4,7 +4,8 @@ if [ $# -lt 1 ]; then
     exit 1
 fi
 file_name=$1
-echo $file_name
+# echo $file_name
 curr_dir="$(pwd)"
-echo $curr_dir
+# echo $curr_dir
+python /home/akash/git_workspace/linux-filemaker/maker.py $file_name $curr_dir
 

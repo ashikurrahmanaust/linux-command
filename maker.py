@@ -1,6 +1,9 @@
 # file maker
 import  sys, os
 
+# defines or constants
+TEMPLATE_PATH = '/home/akash/git_workspace/linux-filemaker'
+
 class Maker:
     def __init__(self, file_name, current_directory, template_path):
         self.file_name = file_name
@@ -37,16 +40,13 @@ class Maker:
         cmd = "echo \"" + str(data) + "\" >> " +  self.curr_dir + "/" + self.file_name
         os.system(cmd)
         
-    
-    def dis(self):
-        print(self.file_name + ' ' + self.curr_dir)
 def main():
     if (len(sys.argv) < 3):
         exit(0)
     file_name = str(sys.argv[1])
     curr_dir = str(sys.argv[2])
-    maker = Maker(file_name, curr_dir, '/home/akash/git_workspace/linux-filemaker')
+    maker = Maker(file_name, curr_dir, TEMPLATE_PATH)
     maker.run()
 
-if (True):
+if (__name__ == '__main__'):
     main()

@@ -9,5 +9,6 @@ curr_dir="$(pwd)"
 # echo $curr_dir
 python /home/akash/git_workspace/linux-filemaker/maker.py $file_name $curr_dir
 
-geany $file_name &
+# clearing geany cache
+geany $file_name -c ~/.cache/geany_config &
 

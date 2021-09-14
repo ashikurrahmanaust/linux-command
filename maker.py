@@ -40,6 +40,16 @@ class Maker:
         cmd = "echo \"" + str(data) + "\" >> " +  self.curr_dir + "/" + self.file_name
         os.system(cmd)
         
+    def find(text, pattern, st = 0):
+        n = int(len(text))
+        m = int(len(pattern))
+        for i in range(st, n - m + 1):
+            sub = text[i : i + m]
+            if (sub == pattern):
+                return i
+        return -1
+
+        
 def main():
     if (len(sys.argv) < 3):
         exit(0)
